@@ -3,7 +3,78 @@
 Or my experiments in creating bitmaps for OLED displays driven by Arduino. But
 I am hoping this becomes image to bitmap for OLED displays.
 
-## Manual process
+## TL;DR
+
+manual processing of some web logos into bitmaps to display on a 128x64 OLED
+display via an arduino. resulting in
+
+<img
+  src="images/web_logo_cycle.gif"
+  width="320px"
+  title="cycling through logos on OLED display" />
+
+## Manual process - for some rails logos
+
+Knowing that I could put an arbitrary image onto an OLED screen made this feel
+like a mandatory addition to an
+[#ArduinoOnRails](https://twitter.com/hashtag/ArduinoOnRails)
+presntation I was planning to do at the local Melbourne Ruby On Rails meetup
+group
+[Wed 28th of October 2020](https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/stdzqrybcnblc/)
+with this brief:
+[Issue #165](https://github.com/rails-oceania/melbourne-ruby/issues/165)
+
+So naturally I searched out some Ruby and Rails logos
+
+- Rails logo, orignial from https://en.wikipedia.org/wiki/Ruby_on_Rails
+
+  <img src="images/rails_logo.png" width="320px" title="Rails logo" />
+
+- Ruby AU logo, original from https://ruby.org.au/
+
+  <img src="images/ruby_au_logo.png" width="320px" title="Ruby AU logo" />
+
+- The RORO (Ruby On Rails Oceania) group logo as per https://github.com/rails-oceania/roro/blob/master/rorosyd-logo.png
+
+  <img src="images/roro_logo.png" width="320px" title="RORO logo" />
+
+and throw in a React logo
+
+- React logo, original from https://reactjs.org/
+
+  <img src="images/react_logo.svg" width="320px" title="React JS logo" />
+
+- React to fit 128x64 full screen
+
+and my own Failure-Driven logo
+[Github](https://github.com/failure-driven),
+[YouTube](https://www.youtube.com/channel/UCVWaSXuexIlR6raOcm3m2Hw) and
+[Blog](https://failure-driven.com/)
+
+- Failure Driven logo original
+
+  <img src="images/failure_driven_logo.png" width="320px" title="Failure Driven logo" />
+
+- Failure Driven logo to fit 128x64 full screen
+
+and while I'm at it why not through in the Arduino logo
+
+- from https://commons.wikimedia.org/wiki/File:Arduino_Logo.svg
+
+  <img src="images/arduino_logo.svg" width="320px" title="Arduino logo" />
+
+and finally a program that will display each logo and cycle through them
+automatically.
+
+- [arduino/web_logos_rotation/web_logos_rotation.ino](arduino/web_logos_rotation/web_logos_rotation.ino)
+
+with the bitmaps for the logos defined in
+
+- [arduino/web_logos_rotation/logos.h](arduino/web_logos_rotation/logos.h)
+
+Finally the display as the animated gif in the [**TL;DR**](#tldr)
+
+## Manual process - fluer-de-lis
 
 1. find an image, a fluer-de-lis from the Polish scouting site
   - via [https://www.pangea.gliwice.zhp.pl](https://www.pangea.gliwice.zhp.pl/index.php/poradnik-harcerski-symbolika-harcerska/poradnik-harcerski-symbolika-lilijka-harcerski)
@@ -165,4 +236,9 @@ simple web app that allows a user to:
 1. easily edit the individual bits
 1. export the image for use in an Arduino sketch to drive an OLED display
 1. send the image directly to an ESP32 to be displayed
+
+## TODO
+
+- move to the newer library https://github.com/olikraus/u8g2/wiki
+- a wiring diagram as per https://www.jaycar.com.au/medias/sys_master/images/images/9451590287390/XC3728-manualMain.pdf
 
