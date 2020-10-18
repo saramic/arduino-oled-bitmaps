@@ -5,12 +5,16 @@ I am hoping this becomes image to bitmap for OLED displays.
 
 ## Manual process
 
-1. find an image, a fluer-de-lis from Canadian Polish scouting site
-  - via http://www.zhpkanada.ca/
-  - http://www.zhpkanada.ca/images/Lilijka%20from%20sztandar.jpg
-1. change the image size to 32x32bits in Gimp and individually draw the
-   required outline bit by bit basing it on the original image to come up with
-   this
+1. find an image, a fluer-de-lis from the Polish scouting site
+  - via [https://www.pangea.gliwice.zhp.pl](https://www.pangea.gliwice.zhp.pl/index.php/poradnik-harcerski-symbolika-harcerska/poradnik-harcerski-symbolika-lilijka-harcerski)
+  - [png harcerska lilijka (scouting fleur-de-lis)](https://www.pangea.gliwice.zhp.pl/images/5-Podstrony/4-StrefaHarcerza/6-Poradnik/2-Symbolika/PoradnikHarcerski-Symbolika-LilijkaHarcerska-1.png)
+  - ![lilijka harcerska](images/lilijka_harcerska.png)
+1. change the image size to 32x32 pixels ie 32x32 bits in Gimp and individually
+   draw the required outline bit by bit basing it on the original image to come
+   up with this
+   ![lilijka harcerska 32](images/lilijka_harcerska_32.png)
+1. invert it as white becomes lit on the display
+   ![lilijka harcerska 32 inverted](images/lilijka_harcerska_32_inverted.png)
 1. initially I planned to manually convert the image bits to code but found
    this too tedious and error prone. An Example below is from [u8glib wiki
    userreference#drawbitmap](https://github.com/olikraus/u8glib/wiki/userreference#drawbitmap)
@@ -97,6 +101,14 @@ I am hoping this becomes image to bitmap for OLED displays.
      0x0, 0x1, 0x80, 0x0
    };
    ```
+1. putting this into a program to display it
+   [arduino/fleur_de_lis_on_oled/fleur_de_lis_on_oled.ino](arduino/fleur_de_lis_on_oled/fleur_de_lis_on_oled.ino)
+1. wiring up the arduino Duemilanove as follows
+   ... TODO
+
+1. we finally have a 32 pixel high fleur-de-lis on the OLED display in the top
+   right hand corner
+   ![fleur-de-lis on OLED](images/fleur-de-lis_on_oled.jpg)
 
 ## Background
 
