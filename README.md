@@ -19,6 +19,7 @@ I am hoping this becomes image to bitmap for OLED displays.
    this too tedious and error prone. An Example below is from [u8glib wiki
    userreference#drawbitmap](https://github.com/olikraus/u8glib/wiki/userreference#drawbitmap)
    of a rook, a castle as may be used to display the chess piece.
+
    ```
    const uint8_t rook_bitmap[] U8G_PROGMEM = {
      B00000000 
@@ -31,8 +32,10 @@ I am hoping this becomes image to bitmap for OLED displays.
      B01111111
    };
    ```
+
    If you squint at the above you can see the rook. This can be simplifed to
    hex numbers as so.
+
    ```
    const uint8_t rook_bitmap[] U8G_PROGMEM = {
      0x00, // 00000000 
@@ -45,7 +48,9 @@ I am hoping this becomes image to bitmap for OLED displays.
      0x7f  // 01111111
    };
    ```
+
    and this can be drawn to an OLED display with 
+
    ```
    void draw(void) {
      // at position 0,0 from top right
@@ -55,6 +60,7 @@ I am hoping this becomes image to bitmap for OLED displays.
      u8g.drawBitmapP( 0, 0, 1, 8, rook_bitmap);
    }
    ```
+
 1. At this stage I got confused at how to do something of a bigger width and
    started looking at what people did to convert more complicated images to
    bitmaps.
@@ -65,6 +71,7 @@ I am hoping this becomes image to bitmap for OLED displays.
    it seems not to have the `Img2Code` program but refers you back to 
    [**ehubin**'s](https://github.com/ehubin) fork to get the utility program.
 1. and the result is as follows
+
    ```
    const unsigned char fluer_de_lis[] PROGMEM = {
      0x0, 0x1, 0x80, 0x0,
@@ -101,6 +108,7 @@ I am hoping this becomes image to bitmap for OLED displays.
      0x0, 0x1, 0x80, 0x0
    };
    ```
+
 1. putting this into a program to display it
    [arduino/fleur_de_lis_on_oled/fleur_de_lis_on_oled.ino](arduino/fleur_de_lis_on_oled/fleur_de_lis_on_oled.ino)
 1. wiring up the arduino Duemilanove as follows
