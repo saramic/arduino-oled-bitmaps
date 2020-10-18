@@ -8,13 +8,13 @@ I am hoping this becomes image to bitmap for OLED displays.
 1. find an image, a fluer-de-lis from the Polish scouting site
   - via [https://www.pangea.gliwice.zhp.pl](https://www.pangea.gliwice.zhp.pl/index.php/poradnik-harcerski-symbolika-harcerska/poradnik-harcerski-symbolika-lilijka-harcerski)
   - [png harcerska lilijka (scouting fleur-de-lis)](https://www.pangea.gliwice.zhp.pl/images/5-Podstrony/4-StrefaHarcerza/6-Poradnik/2-Symbolika/PoradnikHarcerski-Symbolika-LilijkaHarcerska-1.png)
-  - ![lilijka harcerska](images/lilijka_harcerska.png)
+   <img src="images/lilijka_harcerska.png" width="320px" title="lilijka harcerska (scouting fleur-de-lis)" />
 1. change the image size to 32x32 pixels ie 32x32 bits in Gimp and individually
    draw the required outline bit by bit basing it on the original image to come
    up with this
-   ![lilijka harcerska 32](images/lilijka_harcerska_32.png)
+   <img src="images/lilijka_harcerska_32.png" width="320px" title="lilijka harcerska 32" />
 1. invert it as white becomes lit on the display
-   ![lilijka harcerska 32 inverted](images/lilijka_harcerska_32_inverted.png)
+   <img src="images/lilijka_harcerska_32_inverted.png" width="320px" title="lilijka harcerska 32 inverted" />
 1. initially I planned to manually convert the image bits to code but found
    this too tedious and error prone. An Example below is from [u8glib wiki
    userreference#drawbitmap](https://github.com/olikraus/u8glib/wiki/userreference#drawbitmap)
@@ -108,7 +108,7 @@ I am hoping this becomes image to bitmap for OLED displays.
 
 1. we finally have a 32 pixel high fleur-de-lis on the OLED display in the top
    right hand corner
-   ![fleur-de-lis on OLED](images/fleur-de-lis_on_oled.jpg)
+   <img src="images/fleur-de-lis_on_oled.jpg" width="320px" title="fleur-de-lis on OLED" />
 
 ## Background
 
