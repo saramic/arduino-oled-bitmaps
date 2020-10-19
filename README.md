@@ -63,6 +63,13 @@ and while I'm at it why not through in the Arduino logo
 
   <img src="images/arduino_logo.svg" width="320px" title="Arduino logo" />
 
+also through in my work logo for [Fresho](http://fresho.com) and a related
+project I am working on around a cloud connected weighing scale, which I call
+Cloud Scale - ☁️ ⚖️ .
+
+- <img src="images/fresho_logo.svg" width="320px" title="Fresho logo" />
+- <img src="images/cloud_scale_128x64.png" width="320px" title="Cloud Scale logo" />
+
 and finally a program that will display each logo and cycle through them
 automatically.
 

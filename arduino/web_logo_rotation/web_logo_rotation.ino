@@ -3,7 +3,7 @@
 
 U8GLIB_SH1106_128X64 u8g(13, 11, 10, 9); // SCK = 13, MOSI = 11, CS = 10, A0 = 9
 
-const int pageCount = 6;
+const int pageCount = 2;
 int page;
 
 void pageRuby() {
@@ -24,14 +24,22 @@ void  pageFailureDriven() {
 void  pageArduino () {
   u8g.drawBitmapP( 17, 0, 12, 64, arduino_bitmap); // 94x64 so 17 X offset and 12 bytes wide
 }
+void  pageFresho () {
+  u8g.drawBitmapP( 0, 0, 16, 64, fresho_bitmap); // 128x64 so 0 X offset full width of 16 bytes wide
+}
+void  pageCloudScale() {
+  u8g.drawBitmapP( 0, 0, 16, 64, cloud_scale_bitmap); // 128x64 so 0 X offset full width of 16 bytes wide
+}
 
 void (*pages[pageCount])() = {
-  pageRuby,
-  pageRails,
-  pageRoro,
-  pageReact,
-  pageFailureDriven,
-  pageArduino
+//  pageRuby,
+//  pageRails,
+//  pageRoro,
+//  pageReact,
+//  pageFailureDriven,
+//  pageArduino,
+  pageFresho,
+  pageCloudScale
 };
 
 void setup() {
